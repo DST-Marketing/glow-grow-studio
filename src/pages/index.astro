@@ -1,0 +1,78 @@
+---
+import "../styles/global.css";
+
+const picks = [
+  ["Skincare", "Barrier Reset Trio", "Gentle cleanser, ceramide cream, and sunscreen for calm everyday glow.", "Dry or sensitive skin"],
+  ["Makeup", "Soft Glow Kit", "Tinted base, cream blush, brow gel, and lip oil for five-minute polish.", "Low-effort beauty days"],
+  ["Wellness", "Daily Care Stack", "Hydration bottle, magnesium ritual, stretch band, and sleep wind-down.", "Busy founders and creators"],
+];
+
+const events = [
+  ["Glow Walk", "Morning movement, matcha, and intention setting."],
+  ["Routine Lab", "Bring your products and build a realistic AM/PM flow."],
+  ["Founder Circle", "Quiet accountability for women building beautiful things."],
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Glow & Grow Studio is a warm personal website for beauty, wellness, self-care, product picks, and community events." />
+    <title>Glow & Grow Studio</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Glow & Grow Studio home"><span class="brand-mark">G&G</span><span>Glow & Grow Studio</span></a>
+      <nav aria-label="Primary navigation"><a href="#story">Story</a><a href="#picks">Picks</a><a href="#community">Community</a><a href="#apps">Apps</a></nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-media" role="img" aria-label="Sunlit vanity with skincare, journal, tea, and wellness details"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Beauty, wellness, self-care, and community</p>
+          <h1>Glow & Grow Studio</h1>
+          <p>A personal brand home for warm routines, thoughtful product picks, creative projects, and community moments that make growth feel gentle.</p>
+          <div class="hero-actions"><a class="button primary" href="#apps">Try a mini app</a><a class="button secondary" href="#community">Join Founders Club</a></div>
+        </div>
+      </section>
+
+      <section id="story" class="section intro-grid">
+        <div><p class="eyebrow">Personal portfolio</p><h2>A soft place for the whole story</h2><p>Glow & Grow Studio brings together creativity, writing, beauty taste, wellness rituals, design experiments, hobbies, and projects in one living home. It is personal without being messy, polished without losing warmth.</p></div>
+        <div class="profile-panel"><span>Current themes</span><strong>skin confidence, founder energy, slow self-care, creative systems</strong></div>
+      </section>
+
+      <section id="picks" class="section">
+        <div class="section-heading"><p class="eyebrow">Product curation</p><h2>Beauty and health picks with a point of view</h2></div>
+        <div class="card-grid">{picks.map(([category, name, note, match]) => <article class="pick-card"><span>{category}</span><h3>{name}</h3><p>{note}</p><small>Best for: {match}</small></article>)}</div>
+      </section>
+
+      <section class="section split">
+        <div><p class="eyebrow">Content</p><h2>Guides, reflections, and rituals</h2><p>Lifestyle writing can live beside product reviews, personal growth notes, beauty routines, wellness reflections, and behind-the-scenes creative work.</p></div>
+        <div class="list-panel"><a href="#apps">The Sunday reset that makes Monday feel softer</a><a href="#apps">How to build a skincare shelf without overbuying</a><a href="#apps">Founders Club notes: confidence, care, and consistency</a></div>
+      </section>
+
+      <section id="community" class="section community">
+        <div class="section-heading"><p class="eyebrow">Community hub</p><h2>Founders Club, meetups, challenges, and member stories</h2></div>
+        <div class="event-row">{events.map(([name, description]) => <article class="event-card"><h3>{name}</h3><p>{description}</p><button class="mini-button" type="button">Save seat</button></article>)}</div>
+      </section>
+
+      <section id="apps" class="section apps">
+        <div class="section-heading"><p class="eyebrow">Vibe code apps</p><h2>Small tools that make self-care feel personal</h2></div>
+        <div class="tool-grid">
+          <article class="tool-card"><h3>Skin Type Finder</h3><label>How does your skin feel by midday?<select id="skinInput"><option value="balanced">Comfortable and steady</option><option value="dry">Tight or flaky</option><option value="oily">Shiny through the T-zone</option><option value="sensitive">Reactive or easily red</option></select></label><button type="button" data-tool="skin">Find routine</button><p class="result" id="skinResult">Your routine will appear here.</p></article>
+          <article class="tool-card"><h3>Beauty Routine Builder</h3><label>Choose your routine moment<select id="routineInput"><option value="morning">Morning</option><option value="night">Night</option><option value="event">Before an event</option></select></label><button type="button" data-tool="routine">Build steps</button><p class="result" id="routineResult">Your steps will appear here.</p></article>
+          <article class="tool-card"><h3>Wellness Habit Tracker</h3><div class="checks"><label><input type="checkbox" value="Water" /> Water</label><label><input type="checkbox" value="Sleep" /> Sleep</label><label><input type="checkbox" value="Movement" /> Movement</label><label><input type="checkbox" value="Mood" /> Mood</label></div><button type="button" data-tool="habits">Check in</button><p class="result" id="habitResult">Track one small win.</p></article>
+          <article class="tool-card"><h3>Product Match Quiz</h3><label>Biggest concern today<select id="productInput"><option value="glow">Dullness</option><option value="calm">Redness</option><option value="energy">Low energy</option><option value="sleep">Poor sleep</option></select></label><button type="button" data-tool="product">Match me</button><p class="result" id="productResult">Your match will appear here.</p></article>
+          <article class="tool-card"><h3>Mood-to-Routine Generator</h3><label>Current mood<select id="moodInput"><option value="tired">Tired</option><option value="anxious">Anxious</option><option value="confident">Confident</option><option value="unfocused">Unfocused</option></select></label><button type="button" data-tool="mood">Generate</button><p class="result" id="moodResult">Your routine will appear here.</p></article>
+          <article class="tool-card"><h3>Glow Score Quiz</h3><label>How many care wins did you complete today?<input id="scoreInput" type="number" min="0" max="8" value="4" /></label><button type="button" data-tool="score">Score glow</button><p class="result" id="scoreResult">Your score will appear here.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer><strong>Glow & Grow Studio</strong><span>Curated beauty, grounded wellness, and community-led self-care.</span></footer>
+    <script src="/app.js"></script>
+  </body>
+</html>
