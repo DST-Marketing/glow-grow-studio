@@ -1,0 +1,19 @@
+{
+  "name": "glow-grow-studio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "npm run build && wrangler pages deploy ./dist --project-name glow-grow-studio"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.6.5",
+    "astro": "^5.10.1"
+  },
+  "devDependencies": {
+    "wrangler": "^4.23.0"
+  }
+}
