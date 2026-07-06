@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <radialGradient id="paper" cx="50%" cy="42%" r="70%"><stop offset="0" stop-color="#fffdf8"/><stop offset="1" stop-color="#f8efe5"/></radialGradient>
+    <linearGradient id="rose" x1="0" x2="1"><stop offset="0" stop-color="#c78170"/><stop offset="1" stop-color="#a45f55"/></linearGradient>
+    <linearGradient id="green" x1="0" x2="1"><stop offset="0" stop-color="#879f76"/><stop offset="1" stop-color="#315844"/></linearGradient>
+    <filter id="soft"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#443024" flood-opacity="0.12"/></filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#paper)"/>
+  <circle cx="600" cy="430" r="345" fill="none" stroke="#315844" stroke-width="5" opacity=".65"/>
+  <circle cx="600" cy="430" r="325" fill="none" stroke="#c78170" stroke-width="3" opacity=".62"/>
+  <path d="M170 610c48-150 52-290 210-410" fill="none" stroke="#d49a7a" stroke-width="6" stroke-linecap="round" opacity=".55"/>
+  <path d="M190 555c66-54 136-54 185-150" fill="none" stroke="#d49a7a" stroke-width="4" stroke-linecap="round" opacity=".5"/>
+  <text x="615" y="300" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="142" fill="url(#rose)">Glow</text>
+  <text x="590" y="440" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="150" fill="url(#green)">&amp;Grow</text>
+  <text x="600" y="535" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="58" letter-spacing="22" fill="#b96565">STUDIO</text>
+  <g filter="url(#soft)">
+    <rect x="250" y="610" width="115" height="95" rx="12" fill="#f4ded2" stroke="#c78170" stroke-width="3"/>
+    <rect x="270" y="570" width="74" height="70" rx="22" fill="#f6e5dc" stroke="#c78170" stroke-width="3"/>
+    <circle cx="560" cy="660" r="82" fill="#fffaf4" stroke="#d79a42" stroke-width="4"/>
+    <path d="M500 650c45-62 94-62 142 0c-52 30-96 32-142 0z" fill="#879f76" opacity=".7"/>
+    <circle cx="550" cy="648" r="13" fill="#315844"/><circle cx="590" cy="650" r="13" fill="#c78170"/><circle cx="620" cy="668" r="13" fill="#d79a42"/>
+  </g>
+  <g fill="none" stroke="#879f76" stroke-width="8" stroke-linecap="round" opacity=".8">
+    <path d="M900 640c-8-72 10-120 52-150c42 30 60 78 52 150"/>
+    <path d="M953 705v-160"/>
+    <path d="M870 705c70 34 145 34 215 0"/>
+  </g>
+  <g fill="#c78170" opacity=".78">
+    <circle cx="865" cy="615" r="24"/><path d="M830 700c8-62 62-62 70 0z"/>
+    <circle cx="1030" cy="615" r="24"/><path d="M995 700c8-62 62-62 70 0z"/>
+  </g>
+  <g fill="#879f76" opacity=".75">
+    <path d="M170 710c70-120 100-155 138-178c-20 80-68 140-138 178z"/>
+    <path d="M1008 360c54-78 92-94 134-100c-18 64-72 110-134 100z"/>
+  </g>
+  <text x="600" y="815" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" letter-spacing="11" fill="#315844">GLOW WITH CARE, GROW TOGETHER</text>
+</svg>
