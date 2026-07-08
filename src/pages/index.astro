@@ -10,7 +10,7 @@ const picks = [
 const foundersClubEvents = [
   {
     name: "Wellness HIIT Workout",
-    tag: "Connect. Move. Grow.",
+    tag: "Connect . Move . Grow",
     quote: "You do not need to be fit to start. You only need to show up, move with us, and let the energy carry you forward.",
     schedule: "Tuesday or Thursday evenings, usually from 7 PM or 8 PM onwards depending on the available weekly slots.",
     bestFor: "Busy founders, creators, working adults, beginners, and anyone who wants a fun fitness reset without feeling judged.",
@@ -23,13 +23,13 @@ const foundersClubEvents = [
   },
   {
     name: "Wellness Badminton",
-    tag: "Move Together. Live Better.",
+    tag: "Connect . Move . Grow",
     quote: "One game can change your mood. One weekly habit can change your energy. Come play, laugh, sweat, and grow with us.",
     schedule: "Tuesday or Thursday evenings, usually from 7 PM or 8 PM onwards depending on confirmed court slots.",
     bestFor: "Beginners, casual players, advanced players, friend groups, and anyone looking for a low-pressure sports community.",
     description: "Wellness Badminton is a weekly sports night for people who want movement with good vibes. The matches are friendly, the energy is welcoming, and the goal is simple: play more, connect more, and build a fitness habit that feels fun enough to repeat.",
     sessionFlow: ["Meet the group and settle into teams", "Friendly rallies and match rotation", "Play at your level, from beginner to advanced", "Light sweat, laughter, and community connection", "Simple close-out so everyone leaves on a high note"],
-    highlights: ["Just RM13 per session", "All fitness and skill levels welcome", "Shuttlecocks provided so you only bring yourself and your gear", "Fun matches focused on play, enjoyment, connection, and good energy"],
+    highlights: ["All fitness and skill levels welcome", "Shuttlecocks provided so you only bring yourself and your gear", "Fun matches focused on play, enjoyment, connection, and good energy", "A friendly setting to move, learn, and feel more confident each week"],
     results: ["Improve agility and endurance", "Boost fitness and burn calories", "Stay active without boring routines", "Meet good people in a positive sports circle"],
     bring: "Water bottle, comfy sports gear, court shoes if available, and your best energy",
     cta: "Reserve my Badminton slot",
@@ -50,8 +50,8 @@ const whatsappLink = "https://wa.me/60104675275?text=Hi%20Founders%20Club%2C%20I
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Glow & Grow Studio is a Founders Community personal brand website for beauty, wellness, self-care, product picks, content, and community events." />
-    <title>Glow & Grow Studio | Founders Community</title>
+    <meta name="description" content="Glow & Grow Studio is a Founders Club personal brand website for beauty, wellness, self-care, product picks, content, and community events." />
+    <title>Glow & Grow Studio | Founders Club</title>
     <link rel="icon" type="image/svg+xml" href="/glow_grow_logo.svg" />
     <link rel="preload" as="image" href="/glow_grow_hero.svg" />
   </head>
@@ -65,16 +65,39 @@ const whatsappLink = "https://wa.me/60104675275?text=Hi%20Founders%20Club%2C%20I
       <section class="hero">
         <div class="hero-media" role="img" aria-label="Sunlit vanity with skincare, journal, tea, and wellness details"></div>
         <div class="hero-copy">
-          <p class="eyebrow">Founders Community for beauty, wellness, and self-care</p>
+          <p class="eyebrow">Founders Club for beauty, wellness, and self-care</p>
           <h1>Glow & Grow Studio</h1>
-          <p>A beautifully designed personal brand home and community hub for warm routines, thoughtful product curation, creative projects, founder wellness, and small tools that make growth feel gentle.</p>
-          <div class="hero-actions"><a class="button primary" href="#apps">Try a mini app</a><a class="button secondary" href="#community">Enter Founders Community</a></div>
+          <p>A beautifully designed personal brand home and Founders Club hub for warm routines, thoughtful product curation, creative projects, founder wellness, and small tools that make growth feel gentle.</p>
+          <div class="hero-actions"><a class="button primary" href="#apps">Try an app</a><a class="button secondary" href="#community">Enter Founders Club</a></div>
         </div>
       </section>
 
-      <section id="story" class="section intro-grid">
-        <div><p class="eyebrow">Personal portfolio</p><h2>A soft place for the whole story</h2><p>Glow & Grow Studio brings together story, hobbies, creativity, writing, design taste, wellness rituals, product notes, and projects in one living home. It is personal without being messy, polished without losing warmth.</p></div>
-        <div class="profile-panel"><span>Current themes</span><strong>skin confidence, founder energy, slow self-care, creative systems, community rituals</strong></div>
+      <section id="story" class="section intro-grid portfolio-story">
+        <div>
+          <p class="eyebrow">Personal portfolio</p>
+          <h2>From quiet routines to a wider circle of growth</h2>
+          <p>Glow & Grow Studio began as a personal space for beauty, wellness, creativity, product notes, and self-care. Over time, joining Founders Club widened the view: routines became shared habits, wellness became movement with real people, and personal growth became something more alive, social, and brave.</p>
+          <div class="journey-steps">
+            <details open>
+              <summary>Before</summary>
+              <p>A softer, private season of learning personal style, building confidence, collecting routines, and figuring out what wellness really means day to day.</p>
+            </details>
+            <details>
+              <summary>Transition</summary>
+              <p>Founders Club created a bridge from thinking alone to growing with others through movement, stories, encouragement, and weekly accountability.</p>
+            </details>
+            <details>
+              <summary>Later</summary>
+              <p>The vision became wider: more courage to show up, more people to learn from, more energy to create, and more space to become healthier inside and outside.</p>
+            </details>
+          </div>
+        </div>
+        <div class="profile-panel interactive-panel">
+          <span>Growth themes</span>
+          <strong>confidence, community, movement, wellness, self-care, creative courage</strong>
+          <p>Every chapter has a different kind of glow. The club is where personal care turns into shared momentum.</p>
+          <a class="mini-button panel-link" href="#community">Join the club rhythm</a>
+        </div>
       </section>
 
       <section id="picks" class="section">
@@ -98,7 +121,7 @@ const whatsappLink = "https://wa.me/60104675275?text=Hi%20Founders%20Club%2C%20I
         </div>
 
         <div class="founders-motto">
-          <strong>Move together. Live better.</strong>
+          <strong>Connect . Move . Grow</strong>
           <span>Whether you are starting fresh or already active, Founders Club gives you a reason to show up, sweat a little, smile a lot, and keep becoming the healthier version of yourself.</span>
         </div>
 
@@ -146,19 +169,19 @@ const whatsappLink = "https://wa.me/60104675275?text=Hi%20Founders%20Club%2C%20I
       </section>
 
       <section id="apps" class="section apps">
-        <div class="section-heading"><p class="eyebrow">Vibe code apps</p><h2>Small tools that make self-care feel personal</h2></div>
+        <div class="section-heading"><p class="eyebrow">Apps for Use</p><h2>Interactive choices for routine, wellness, products, and club planning</h2></div>
         <div class="tool-grid enhanced-tools">
-          <article class="tool-card"><div class="tool-title"><h3>Skin Type Finder</h3><span>Routine logic</span></div><p class="tool-note">Map skin feel, sensitivity, and current goal into a simple care priority.</p><label>Midday skin feel<select id="skinInput"><option value="balanced">Comfortable and steady</option><option value="dry">Tight or flaky</option><option value="oily">Shiny through the T-zone</option><option value="sensitive">Reactive or easily red</option></select></label><label>Sensitivity level<input id="skinSensitivity" type="range" min="1" max="5" value="3" /></label><label>Main goal<select id="skinGoal"><option value="barrier">Repair barrier</option><option value="glow">Boost glow</option><option value="texture">Smooth texture</option><option value="calm">Calm redness</option></select></label><button type="button" data-tool="skin">Find routine</button><div class="result rich-result" id="skinResult">Choose your skin profile to get priorities, ingredients, and steps.</div></article>
-          <article class="tool-card"><div class="tool-title"><h3>Beauty Routine Builder</h3><span>AM / PM flow</span></div><p class="tool-note">Build a realistic routine around time, moment, and effort level.</p><label>Routine moment<select id="routineInput"><option value="morning">Morning</option><option value="night">Night</option><option value="event">Before an event</option></select></label><label>Time available<select id="routineTime"><option value="5">5 minutes</option><option value="10">10 minutes</option><option value="20">20 minutes</option></select></label><label>Finish style<select id="routineFinish"><option value="natural">Natural glow</option><option value="polished">Soft polished</option><option value="minimal">Minimal reset</option></select></label><button type="button" data-tool="routine">Build steps</button><div class="result rich-result" id="routineResult">Your custom order, focus, and skip rules will appear here.</div></article>
-          <article class="tool-card"><div class="tool-title"><h3>Wellness Habit Tracker</h3><span>Daily check-in</span></div><p class="tool-note">Track care wins and get a kind next step instead of an all-or-nothing score.</p><div class="checks"><label><input type="checkbox" value="Water" /> Water</label><label><input type="checkbox" value="Sleep" /> Sleep</label><label><input type="checkbox" value="Movement" /> Movement</label><label><input type="checkbox" value="Mood" /> Mood</label></div><label>Energy today<input id="energyInput" type="range" min="1" max="5" value="3" /></label><label>Sleep hours<input id="sleepInput" type="number" min="0" max="12" value="7" /></label><button type="button" data-tool="habits">Check in</button><div class="result rich-result" id="habitResult">Log wins to get your care score, pattern, and next tiny action.</div></article>
-          <article class="tool-card"><div class="tool-title"><h3>Product Match Quiz</h3><span>Curated picks</span></div><p class="tool-note">Match beauty or wellness products by concern, texture preference, and budget.</p><label>Biggest concern<select id="productInput"><option value="glow">Dullness</option><option value="calm">Redness</option><option value="energy">Low energy</option><option value="sleep">Poor sleep</option></select></label><label>Preference<select id="productPreference"><option value="gentle">Gentle and sensitive-safe</option><option value="fast">Fast visible payoff</option><option value="low">Low-maintenance</option><option value="ritual">Ritual feeling</option></select></label><label>Budget lane<select id="productBudget"><option value="starter">Starter</option><option value="mid">Mid-range</option><option value="treat">Treat-yourself</option></select></label><button type="button" data-tool="product">Match me</button><div class="result rich-result" id="productResult">Your product lane, ingredient cues, and review checklist will appear here.</div></article>
-          <article class="tool-card"><div class="tool-title"><h3>Self-Care Planner</h3><span>Weekly map</span></div><p class="tool-note">Create a weekly founder-friendly care plan around capacity and focus.</p><label>Week type<select id="plannerInput"><option value="steady">Steady and full</option><option value="launch">Launch or event week</option><option value="recovery">Recovery week</option><option value="social">Social and community week</option></select></label><label>Capacity<select id="plannerCapacity"><option value="low">Low capacity</option><option value="medium">Medium capacity</option><option value="high">High capacity</option></select></label><label>Anchor habit<select id="plannerAnchor"><option value="sleep">Sleep</option><option value="movement">Movement</option><option value="meal">Meals</option><option value="beauty">Beauty reset</option></select></label><button type="button" data-tool="planner">Plan week</button><div class="result rich-result" id="plannerResult">Your weekly rhythm, anchors, and boundaries will appear here.</div></article>
-          <article class="tool-card"><div class="tool-title"><h3>Mood-to-Routine Generator</h3><span>Care response</span></div><p class="tool-note">Translate mood into a self-care routine with a first step, body cue, and closing ritual.</p><label>Current mood<select id="moodInput"><option value="tired">Tired</option><option value="anxious">Anxious</option><option value="confident">Confident</option><option value="unfocused">Unfocused</option></select></label><label>Intensity<input id="moodIntensity" type="range" min="1" max="5" value="3" /></label><label>Available window<select id="moodWindow"><option value="5">5 minutes</option><option value="15">15 minutes</option><option value="30">30 minutes</option></select></label><button type="button" data-tool="mood">Generate</button><div class="result rich-result" id="moodResult">Your mood-based care path will appear here.</div></article>
+          <article class="tool-card"><div class="tool-title"><h3>Skin Type Finder</h3><span>Routine logic</span></div><p class="tool-note">Map skin feel, sensitivity, and current goal into a simple care priority.</p><label>Midday skin feel<select id="skinInput"><option value="balanced">Comfortable and steady</option><option value="combination">Combination and changing</option><option value="dry">Tight or flaky</option><option value="oily">Shiny through the T-zone</option><option value="sensitive">Reactive or easily red</option><option value="acne">Congested or breakout-prone</option></select></label><label>Sensitivity level<input id="skinSensitivity" type="range" min="1" max="5" value="3" /></label><label>Main goal<select id="skinGoal"><option value="barrier">Repair barrier</option><option value="glow">Boost glow</option><option value="texture">Smooth texture</option><option value="calm">Calm redness</option><option value="makeup">Prep for makeup</option><option value="post-workout">Post-workout refresh</option></select></label><button type="button" data-tool="skin">Find routine</button><div class="result rich-result" id="skinResult">Choose your skin profile to get priorities, ingredients, and steps.</div></article>
+          <article class="tool-card"><div class="tool-title"><h3>Beauty Routine Builder</h3><span>AM / PM flow</span></div><p class="tool-note">Build a realistic routine around time, moment, and effort level.</p><label>Routine moment<select id="routineInput"><option value="morning">Morning</option><option value="night">Night</option><option value="event">Before an event</option><option value="postWorkout">After workout</option><option value="travel">Travel day</option></select></label><label>Time available<select id="routineTime"><option value="5">5 minutes</option><option value="10">10 minutes</option><option value="20">20 minutes</option><option value="30">30 minutes</option></select></label><label>Finish style<select id="routineFinish"><option value="natural">Natural glow</option><option value="polished">Soft polished</option><option value="minimal">Minimal reset</option><option value="fresh">Fresh and sporty</option><option value="calm">Calm and hydrated</option></select></label><button type="button" data-tool="routine">Build steps</button><div class="result rich-result" id="routineResult">Your custom order, focus, and skip rules will appear here.</div></article>
+          <article class="tool-card"><div class="tool-title"><h3>Wellness Habit Tracker</h3><span>Daily check-in</span></div><p class="tool-note">Track care wins and get a kind next step instead of an all-or-nothing score.</p><div class="checks"><label><input type="checkbox" value="Water" /> Water</label><label><input type="checkbox" value="Sleep" /> Sleep</label><label><input type="checkbox" value="Movement" /> Movement</label><label><input type="checkbox" value="Mood" /> Mood</label><label><input type="checkbox" value="Protein" /> Protein</label><label><input type="checkbox" value="Community" /> Community</label></div><label>Energy today<input id="energyInput" type="range" min="1" max="5" value="3" /></label><label>Sleep hours<input id="sleepInput" type="number" min="0" max="12" value="7" /></label><button type="button" data-tool="habits">Check in</button><div class="result rich-result" id="habitResult">Log wins to get your care score, pattern, and next tiny action.</div></article>
+          <article class="tool-card"><div class="tool-title"><h3>Product Match Quiz</h3><span>Curated picks</span></div><p class="tool-note">Match beauty or wellness products by concern, texture preference, and lifestyle moment.</p><label>Biggest concern<select id="productInput"><option value="glow">Dullness</option><option value="calm">Redness</option><option value="energy">Low energy</option><option value="sleep">Poor sleep</option><option value="recovery">Post-workout recovery</option><option value="confidence">Confidence boost</option></select></label><label>Preference<select id="productPreference"><option value="gentle">Gentle and sensitive-safe</option><option value="fast">Fast visible payoff</option><option value="low">Low-maintenance</option><option value="ritual">Ritual feeling</option><option value="sporty">Sporty and practical</option></select></label><label>Budget lane<select id="productBudget"><option value="starter">Starter</option><option value="mid">Mid-range</option><option value="treat">Treat-yourself</option><option value="club">Club event ready</option></select></label><button type="button" data-tool="product">Match me</button><div class="result rich-result" id="productResult">Your product lane, ingredient cues, and review checklist will appear here.</div></article>
+          <article class="tool-card"><div class="tool-title"><h3>Self-Care Planner</h3><span>Weekly map</span></div><p class="tool-note">Create a weekly founder-friendly care plan around capacity and focus.</p><label>Week type<select id="plannerInput"><option value="steady">Steady and full</option><option value="launch">Launch or event week</option><option value="recovery">Recovery week</option><option value="social">Social and community week</option><option value="training">Training week</option><option value="club">Founders Club week</option></select></label><label>Capacity<select id="plannerCapacity"><option value="low">Low capacity</option><option value="medium">Medium capacity</option><option value="high">High capacity</option></select></label><label>Anchor habit<select id="plannerAnchor"><option value="sleep">Sleep</option><option value="movement">Movement</option><option value="meal">Meals</option><option value="beauty">Beauty reset</option><option value="friendship">Friendship</option><option value="confidence">Confidence</option></select></label><button type="button" data-tool="planner">Plan week</button><div class="result rich-result" id="plannerResult">Your weekly rhythm, anchors, and boundaries will appear here.</div></article>
+          <article class="tool-card"><div class="tool-title"><h3>Mood-to-Routine Generator</h3><span>Care response</span></div><p class="tool-note">Translate mood into a self-care routine with a first step, body cue, and closing ritual.</p><label>Current mood<select id="moodInput"><option value="tired">Tired</option><option value="anxious">Anxious</option><option value="confident">Confident</option><option value="unfocused">Unfocused</option><option value="overwhelmed">Overwhelmed</option><option value="social">Ready to connect</option></select></label><label>Intensity<input id="moodIntensity" type="range" min="1" max="5" value="3" /></label><label>Available window<select id="moodWindow"><option value="5">5 minutes</option><option value="15">15 minutes</option><option value="30">30 minutes</option><option value="60">60 minutes</option></select></label><button type="button" data-tool="mood">Generate</button><div class="result rich-result" id="moodResult">Your mood-based care path will appear here.</div></article>
         </div>
       </section>
     </main>
 
-    <footer><strong>Glow & Grow Studio</strong><span>Founders Community for curated beauty, grounded wellness, and community-led self-care.</span></footer>
+    <footer><strong>Glow & Grow Studio</strong><span>Founders Club for curated beauty, grounded wellness, and community-led self-care.</span></footer>
     <script is:inline src="/app.js"></script>
   </body>
 </html>
