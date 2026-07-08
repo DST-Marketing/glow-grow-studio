@@ -7,10 +7,25 @@ const picks = [
   ["Health Products", "Daily Care Stack", "Hydration bottle, magnesium ritual, stretch band, and sleep wind-down.", "Busy founders and creators"],
 ];
 
-const events = [
-  ["Glow Walk", "Morning movement, matcha, and intention setting for founders."],
-  ["Routine Lab", "Bring your products and build a realistic AM/PM flow with the community."],
-  ["Founder Circle", "Quiet accountability for women building beautiful things with care."],
+const foundersClubEvents = [
+  {
+    name: "Wellness HIIT Workout",
+    tag: "Connect. Move. Grow.",
+    schedule: "Weekly sessions on Tuesday or Thursday evenings, usually from 7 PM or 8 PM onwards depending on available slots.",
+    description: "A high-energy community workout built for busy founders who want to move, sweat, reset, and leave feeling lighter. Expect beginner-friendly HIIT, stretch and cool down, practical wellness tips, and a supportive group that keeps the mood fun instead of intimidating.",
+    highlights: ["Fun, effective HIIT for all fitness levels", "Health measurements such as muscle mass, weight, body fat percentage, BMI, and more", "Professional wellness consultant advice with personalized tips, nutrition guidance, workout feedback, and lifestyle support", "Healthy plant-based protein served after workout for recovery, energy, and a delicious finish"],
+    expect: ["Stretch and cool down to recover properly", "Ad hoc hikes, challenges, games, and confirmed sports add-ons", "Community giveaways, rewards, prizes, and surprises"],
+    bring: "Water bottle, towel, extra pair of shoes, and gym bag",
+  },
+  {
+    name: "Wellness Badminton",
+    tag: "Move Together. Live Better.",
+    schedule: "Weekly sports event on Tuesday or Thursday evenings, usually from 7 PM or 8 PM onwards depending on court slots.",
+    description: "A friendly badminton night for people who want movement, laughter, and better energy without pressure. Come for casual matches, stay for the community vibe, and build a simple weekly habit that improves agility, endurance, and confidence.",
+    highlights: ["Just RM13 per session", "All levels welcome, from beginners to advanced players", "Fun and friendly matches focused on play, enjoyment, and connection", "Shuttlecocks provided, so you only need to bring yourself and your gear"],
+    expect: ["Great workout that boosts fitness and burns calories", "Good people, good energy, and a welcoming sports community", "A simple way to stay active, positive, and consistent every week"],
+    bring: "Water bottle, comfy sports gear, and your best energy",
+  },
 ];
 
 const notes = [
@@ -18,6 +33,8 @@ const notes = [
   "Product reviews with context: skin concern, routine fit, budget, and repurchase notes.",
   "Wellness reflections for water, sleep, movement, mood, confidence, and gentle ambition.",
 ];
+
+const whatsappLink = "https://wa.me/60104675275?text=Hi%20Founders%20Club%2C%20I%20want%20to%20know%20more%20about%20the%20Wellness%20HIIT%20and%20Badminton%20weekly%20events.";
 ---
 
 <!doctype html>
@@ -62,9 +79,39 @@ const notes = [
         <div class="list-panel">{notes.map((note) => <a href="#apps">{note}</a>)}</div>
       </section>
 
-      <section id="community" class="section community">
-        <div class="section-heading"><p class="eyebrow">Founders Community</p><h2>Founders Club, wellness meetups, challenges, and member stories</h2></div>
-        <div class="event-row">{events.map(([name, description]) => <article class="event-card"><h3>{name}</h3><p>{description}</p><button class="mini-button" type="button">Save seat</button></article>)}</div>
+      <section id="community" class="section community founders-club">
+        <div class="section-heading founders-heading">
+          <div>
+            <p class="eyebrow">Founders Club</p>
+            <h2>Founders Club</h2>
+            <p class="section-lede">Weekly wellness sports for people who want to connect, move, grow, and build healthier habits with a friendly community.</p>
+          </div>
+          <a class="button primary founders-cta" href={whatsappLink} target="_blank" rel="noopener noreferrer">WhatsApp us</a>
+        </div>
+        <div class="founders-grid">
+          {foundersClubEvents.map((event) => (
+            <article class="founders-card">
+              <div class="founders-card-head">
+                <span>{event.tag}</span>
+                <h3>{event.name}</h3>
+                <p>{event.schedule}</p>
+              </div>
+              <p class="founders-description">{event.description}</p>
+              <div class="founders-columns">
+                <div>
+                  <strong>Why join us?</strong>
+                  <ul>{event.highlights.map((item) => <li>{item}</li>)}</ul>
+                </div>
+                <div>
+                  <strong>What to expect</strong>
+                  <ul>{event.expect.map((item) => <li>{item}</li>)}</ul>
+                </div>
+              </div>
+              <div class="bring-strip"><strong>Bring:</strong> {event.bring}</div>
+              <a class="mini-button founders-card-cta" href={whatsappLink} target="_blank" rel="noopener noreferrer">Ask for this week's slot</a>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section id="apps" class="section apps">
