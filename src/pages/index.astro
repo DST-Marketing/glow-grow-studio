@@ -11,20 +11,28 @@ const foundersClubEvents = [
   {
     name: "Wellness HIIT Workout",
     tag: "Connect. Move. Grow.",
-    schedule: "Weekly sessions on Tuesday or Thursday evenings, usually from 7 PM or 8 PM onwards depending on available slots.",
-    description: "A high-energy community workout built for busy founders who want to move, sweat, reset, and leave feeling lighter. Expect beginner-friendly HIIT, stretch and cool down, practical wellness tips, and a supportive group that keeps the mood fun instead of intimidating.",
-    highlights: ["Fun, effective HIIT for all fitness levels", "Health measurements such as muscle mass, weight, body fat percentage, BMI, and more", "Professional wellness consultant advice with personalized tips, nutrition guidance, workout feedback, and lifestyle support", "Healthy plant-based protein served after workout for recovery, energy, and a delicious finish"],
-    expect: ["Stretch and cool down to recover properly", "Ad hoc hikes, challenges, games, and confirmed sports add-ons", "Community giveaways, rewards, prizes, and surprises"],
-    bring: "Water bottle, towel, extra pair of shoes, and gym bag",
+    quote: "You do not need to be fit to start. You only need to show up, move with us, and let the energy carry you forward.",
+    schedule: "Tuesday or Thursday evenings, usually from 7 PM or 8 PM onwards depending on the available weekly slots.",
+    bestFor: "Busy founders, creators, working adults, beginners, and anyone who wants a fun fitness reset without feeling judged.",
+    description: "Our Wellness HIIT session is made to feel exciting, friendly, and achievable. You will move through high-intensity intervals at your own pace, recover with guided stretching, learn simple wellness tips, and finish with the kind of group energy that makes you want to come again next week.",
+    sessionFlow: ["Warm welcome and body check-in", "Beginner-friendly HIIT workout with scalable intensity", "Stretch, cool down, and recharge moment", "Wellness consultant feedback and practical lifestyle tips", "Healthy plant-based protein after the workout"],
+    highlights: ["Health measurements including muscle mass, weight, body fat percentage, BMI, and more", "Personalized tips for nutrition, recovery, workout form, and daily habits", "Community support that helps you stay active, positive, and consistent", "Ad hoc hikes, challenges, games, giveaways, rewards, prizes, and surprises"],
+    results: ["Improve strength and endurance", "Build healthier weekly habits", "Make new friends through movement", "Leave feeling lighter, clearer, and more confident"],
+    bring: "Water bottle, towel, extra pair of shoes, gym bag, and an open mind",
+    cta: "Reserve my HIIT slot",
   },
   {
     name: "Wellness Badminton",
     tag: "Move Together. Live Better.",
-    schedule: "Weekly sports event on Tuesday or Thursday evenings, usually from 7 PM or 8 PM onwards depending on court slots.",
-    description: "A friendly badminton night for people who want movement, laughter, and better energy without pressure. Come for casual matches, stay for the community vibe, and build a simple weekly habit that improves agility, endurance, and confidence.",
-    highlights: ["Just RM13 per session", "All levels welcome, from beginners to advanced players", "Fun and friendly matches focused on play, enjoyment, and connection", "Shuttlecocks provided, so you only need to bring yourself and your gear"],
-    expect: ["Great workout that boosts fitness and burns calories", "Good people, good energy, and a welcoming sports community", "A simple way to stay active, positive, and consistent every week"],
-    bring: "Water bottle, comfy sports gear, and your best energy",
+    quote: "One game can change your mood. One weekly habit can change your energy. Come play, laugh, sweat, and grow with us.",
+    schedule: "Tuesday or Thursday evenings, usually from 7 PM or 8 PM onwards depending on confirmed court slots.",
+    bestFor: "Beginners, casual players, advanced players, friend groups, and anyone looking for a low-pressure sports community.",
+    description: "Wellness Badminton is a weekly sports night for people who want movement with good vibes. The matches are friendly, the energy is welcoming, and the goal is simple: play more, connect more, and build a fitness habit that feels fun enough to repeat.",
+    sessionFlow: ["Meet the group and settle into teams", "Friendly rallies and match rotation", "Play at your level, from beginner to advanced", "Light sweat, laughter, and community connection", "Simple close-out so everyone leaves on a high note"],
+    highlights: ["Just RM13 per session", "All fitness and skill levels welcome", "Shuttlecocks provided so you only bring yourself and your gear", "Fun matches focused on play, enjoyment, connection, and good energy"],
+    results: ["Improve agility and endurance", "Boost fitness and burn calories", "Stay active without boring routines", "Meet good people in a positive sports circle"],
+    bring: "Water bottle, comfy sports gear, court shoes if available, and your best energy",
+    cta: "Reserve my Badminton slot",
   },
 ];
 
@@ -84,31 +92,54 @@ const whatsappLink = "https://wa.me/60104675275?text=Hi%20Founders%20Club%2C%20I
           <div>
             <p class="eyebrow">Founders Club</p>
             <h2>Founders Club</h2>
-            <p class="section-lede">Weekly wellness sports for people who want to connect, move, grow, and build healthier habits with a friendly community.</p>
+            <p class="section-lede">Weekly HIIT and Badminton sessions built to help you move better, feel better, meet good people, and stay consistent with a community that makes wellness enjoyable.</p>
           </div>
           <a class="button primary founders-cta" href={whatsappLink} target="_blank" rel="noopener noreferrer">WhatsApp us</a>
         </div>
-        <div class="founders-grid">
+
+        <div class="founders-motto">
+          <strong>Move together. Live better.</strong>
+          <span>Whether you are starting fresh or already active, Founders Club gives you a reason to show up, sweat a little, smile a lot, and keep becoming the healthier version of yourself.</span>
+        </div>
+
+        <div class="founders-grid column-sections">
           {foundersClubEvents.map((event) => (
-            <article class="founders-card">
+            <article class="founders-card founders-column">
               <div class="founders-card-head">
                 <span>{event.tag}</span>
                 <h3>{event.name}</h3>
+                <blockquote>{event.quote}</blockquote>
+              </div>
+
+              <div class="detail-box schedule-box">
+                <strong>Weekly schedule</strong>
                 <p>{event.schedule}</p>
               </div>
+
+              <div class="detail-box">
+                <strong>Who should join?</strong>
+                <p>{event.bestFor}</p>
+              </div>
+
               <p class="founders-description">{event.description}</p>
-              <div class="founders-columns">
+
+              <div class="founders-stack">
                 <div>
-                  <strong>Why join us?</strong>
+                  <strong>What happens inside the session</strong>
+                  <ul>{event.sessionFlow.map((item) => <li>{item}</li>)}</ul>
+                </div>
+                <div>
+                  <strong>Why people love it</strong>
                   <ul>{event.highlights.map((item) => <li>{item}</li>)}</ul>
                 </div>
                 <div>
-                  <strong>What to expect</strong>
-                  <ul>{event.expect.map((item) => <li>{item}</li>)}</ul>
+                  <strong>You will walk away with</strong>
+                  <ul>{event.results.map((item) => <li>{item}</li>)}</ul>
                 </div>
               </div>
+
               <div class="bring-strip"><strong>Bring:</strong> {event.bring}</div>
-              <a class="mini-button founders-card-cta" href={whatsappLink} target="_blank" rel="noopener noreferrer">Ask for this week's slot</a>
+              <a class="mini-button founders-card-cta" href={whatsappLink} target="_blank" rel="noopener noreferrer">{event.cta}</a>
             </article>
           ))}
         </div>
