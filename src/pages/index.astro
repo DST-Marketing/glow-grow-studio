@@ -210,7 +210,10 @@ const faqs = [
           <h2>Real-world moments, soft proof</h2>
         </div>
         <div class="highlight-grid">
-          <article class="photo-placeholder">Event photo</article>
+          <figure class="event-photo">
+            <img src="/founder-hiit-event.svg" alt="Founders Club HIIT group smiling after an evening wellness session" loading="lazy" />
+            <figcaption>Founders Club HIIT community session</figcaption>
+          </figure>
           {quotes.map(([quote, label]) => <article class="soft-card quote-card"><blockquote>{quote}</blockquote><span>{label}</span></article>)}
         </div>
       </section>
@@ -230,7 +233,7 @@ const faqs = [
           <p class="eyebrow">Ready for the next step?</p>
           <h2>Ready to move, connect, and grow with us?</h2>
           <p>Join the next Founders Club session and start with one simple step.</p>
-          <div class="hero-actions">
+          <div class="hero-actions centered-actions">
             <a class="button primary" href={whatsappLink} target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
             <a class="button secondary" href="#activities">View Weekly Activities</a>
           </div>
