@@ -1,247 +1,318 @@
 ---
 import "../styles/global.css";
-
-const whatsappLink = "https://wa.me/60104675275?text=Hi%20Founders%20Club%2C%20I%20want%20to%20join%20or%20ask%20about%20the%20next%20weekly%20session.";
-
-const pillars = [
-  ["Connect", "Meet people through sports, shared routines, and casual conversations after work."],
-  ["Move", "Join beginner-friendly HIIT, Badminton, walks, and active lifestyle sessions."],
-  ["Grow", "Build confidence, wellness habits, self-care routines, and gentle accountability."],
-];
-
-const activities = [
-  {
-    title: "Wellness HIIT",
-    label: "Movement reset",
-    bestFor: "Beginners, busy adults, fitness reset",
-    format: "Beginner-friendly workout with warm-up, scalable HIIT, stretch, and cool down.",
-    details: ["Tuesday or Thursday evening", "Usually 7 PM or 8 PM onwards", "Health measurements and wellness tips available", "Post-workout plant-based protein support"],
-    cta: "Reserve HIIT Slot",
-  },
-  {
-    title: "Wellness Badminton",
-    label: "Social fitness",
-    bestFor: "Casual players, social fitness, fun exercise",
-    format: "Friendly group session with casual rallies, match rotation, and all-level play.",
-    details: ["Tuesday or Thursday evening", "Usually 7 PM or 8 PM onwards", "All levels welcome", "Shuttlecocks provided"],
-    cta: "Join Badminton",
-  },
-  {
-    title: "Ad Hoc Events",
-    label: "Community extras",
-    bestFor: "Hikes, board games, wellness sharing, mingling",
-    format: "Occasional community moments for people who want to connect beyond weekly sports.",
-    details: ["Hikes and outdoor movement", "Casual games and challenges", "Wellness sharing and mini meetups", "Community rewards and surprises"],
-    cta: "Ask for Next Event",
-  },
-];
-
-const benefits = [
-  ["Beginner-friendly", "No pressure, no judgment, and no need to be fit before you start."],
-  ["Community energy", "Showing up becomes easier when the people around you are moving too."],
-  ["Wellness guidance", "Simple tips for routine, nutrition, recovery, and better daily habits."],
-  ["Real connection", "Sports, mingling, and support that feel warm instead of intimidating."],
-  ["Healthier routine", "Movement becomes fun, social, and repeatable rather than forced."],
-];
-
-const picks = [
-  ["Beauty Picks", "Gentle routines for glow, confidence, and easy everyday self-care."],
-  ["Health Products", "Simple wellness support for hydration, sleep, energy, and consistency."],
-  ["Protein / Recovery", "Post-workout support for recovery, satiety, and steady energy."],
-  ["Starter Kit", "Beginner-friendly essentials for movement days, skincare, and reset rituals."],
-];
-
-const tools = [
-  ["Skin Type Finder", "Find a care priority based on skin feel, sensitivity, and current goal.", "skinInput"],
-  ["Beauty Routine Builder", "Build a realistic AM, PM, event, travel, or post-workout routine.", "routineInput"],
-  ["Wellness Habit Tracker", "Log small care wins and get a kind next step for today.", "energyInput"],
-  ["Product Match Quiz", "Match beauty or wellness products by concern, preference, and lifestyle moment.", "productInput"],
-];
-
-const quotes = [
-  ["I came alone but felt welcomed.", "Community welcome"],
-  ["It felt beginner-friendly, fun, and not intimidating.", "First session energy"],
-  ["A simple way to move, meet people, and reset after work.", "After-work reset"],
-];
-
-const faqs = [
-  ["Do I need to be fit to join?", "No. The sessions are beginner-friendly, and you can move at your own pace."],
-  ["Can beginners join Badminton?", "Yes. Casual players and beginners are welcome, and the group is focused on friendly play."],
-  ["What should I bring?", "Bring water, comfortable sportswear, a towel, and court shoes if you have them for Badminton."],
-  ["Is this only for product buyers?", "No. Products are optional support. Founders Club is first about movement, wellness, and community."],
-  ["How do I reserve a slot?", "Tap any WhatsApp or activity button and ask for the next available weekly session."],
-  ["Where is the session held?", "The confirmed place depends on the weekly slot. Message us on WhatsApp for the latest location."],
-  ["Can I bring a friend?", "Yes. Bringing a friend is welcome, especially if it helps you feel more comfortable joining."],
-];
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Glow & Grow Studio is a warm Founders Club community for HIIT, Badminton, self-care, beauty routines, wellness products, and beginner-friendly growth." />
-    <title>Glow & Grow Studio | Founders Club</title>
-    <link rel="icon" type="image/svg+xml" href="/glow_grow_logo.svg" />
+    <meta
+      name="description"
+      content="Glow-Grow-Studio is a personal Founders Club community hub for tracing lists, downline updates, talks, meetings, games, sports, wellness, and networking."
+    />
+    <meta
+      name="keywords"
+      content="Glow-Grow-Studio, Founders Club, Connect Move Grow, community hub, downline updates, tracing list, networking community, wellness community"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://glow-grow-studio.pages.dev/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Glow-Grow-Studio | Founders Club Community Hub" />
+    <meta
+      property="og:description"
+      content="A warm personal community front door for Founders Club, built around Connect, Move, Grow, real conversations, sports, networking, tracing lists, and downline updates."
+    />
+    <meta property="og:url" content="https://glow-grow-studio.pages.dev/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Glow-Grow-Studio | Founders Club Community, Talks & Downline Updates</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Glow-Grow-Studio",
+        "url": "https://glow-grow-studio.pages.dev/",
+        "description": "Glow-Grow-Studio is a warm personal community hub connected with Founders Club, built around Connect, Move, Grow, tracing lists, downline updates, talks, meetings, games, sports, wellness, and networking.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Founders Club"
+        }
+      }
+    </script>
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Glow & Grow Studio home"><span class="brand-mark">G&G</span><span>Glow & Grow Studio</span></a>
+    <header class="site-header" aria-label="Site header">
+      <a class="brand" href="#top" aria-label="Glow-Grow-Studio home">
+        <span class="brand-badge">GG</span>
+        <span>
+          <strong>Glow-Grow-Studio</strong>
+          <small>Founders Club community</small>
+        </span>
+      </a>
+
       <nav aria-label="Primary navigation">
-        <a href="#founders-club">Founders Club</a>
-        <a href="#activities">Activities</a>
-        <a href="#picks">Beauty Picks</a>
-        <a href="#tools">Tools</a>
-        <a href="#about">About</a>
+        <a href="#community">Community</a>
+        <a href="#system">System</a>
+        <a href="#events">Events</a>
+        <a href="#updates">Updates</a>
+        <a href="#join">Join</a>
       </nav>
-      <a class="nav-cta" href={whatsappLink} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+
+      <a class="header-cta" href="https://www.foundersclub.asia/" target="_blank" rel="noopener noreferrer">
+        Founders Club
+      </a>
     </header>
 
     <main id="top">
-      <section class="hero redesigned-hero">
+      <section class="hero-section">
         <div class="hero-copy">
-          <p class="eyebrow">Founders Club lifestyle circle</p>
-          <h1>Glow, Move & Grow With a Real Wellness Community</h1>
-          <p>Join a beginner-friendly lifestyle circle for HIIT, Badminton, self-care, beauty routines, health products, and meaningful connection.</p>
-          <div class="hero-actions">
-            <a class="button primary" href={whatsappLink} target="_blank" rel="noopener noreferrer">Join Founders Club</a>
-            <a class="button secondary" href="#activities">View Weekly Activities</a>
+          <p class="eyebrow">A cozy personal lounge connected with Founders Club</p>
+          <h1>Gather your people before they enter the club.</h1>
+          <p>
+            Glow-Grow-Studio is your gentle pre-community space for warm invites, real
+            conversations, downline updates, coffee chats, games, sports, and networking. It
+            supports the Founders Club rhythm: Connect, Move, and Grow.
+          </p>
+
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#join">Plan a warm invite</a>
+            <a class="button secondary" href="#community">Explore the circle</a>
+          </div>
+
+          <dl class="hero-metrics" aria-label="Community snapshot">
+            <div>
+              <dt>24</dt>
+              <dd>warm connections</dd>
+            </div>
+            <div>
+              <dt>7</dt>
+              <dd>gentle follow-ups</dd>
+            </div>
+            <div>
+              <dt>4</dt>
+              <dd>club pillars</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-visual" aria-label="Animated Glow-Grow-Studio hero visual">
+          <div class="hero-orbit" aria-hidden="true">
+            <span class="hero-glow glow-one"></span>
+            <span class="hero-glow glow-two"></span>
+            <span class="hero-card card-one"></span>
+            <span class="hero-card card-two"></span>
+            <span class="hero-card card-three"></span>
+            <span class="hero-ring ring-one"></span>
+            <span class="hero-ring ring-two"></span>
+            <span class="hero-ring ring-three"></span>
+            <span class="hero-core">GG</span>
+            <span class="hero-pill pill-connect">Connect</span>
+            <span class="hero-pill pill-move">Move</span>
+            <span class="hero-pill pill-grow">Grow</span>
+            <span class="hero-particle particle-one"></span>
+            <span class="hero-particle particle-two"></span>
+            <span class="hero-particle particle-three"></span>
+            <span class="hero-particle particle-four"></span>
+          </div>
+          <div class="hero-visual-caption">
+            <strong>Connect. Move. Grow.</strong>
+            <span>A cozy orbit for warm invites, coffee chats, sports, and founder-minded conversations.</span>
           </div>
         </div>
-        <div class="hero-collage" aria-label="Warm lifestyle cards for movement, Badminton, beauty, and wellness">
-          <article><span>HIIT</span><strong>Move with energy</strong></article>
-          <article><span>Badminton</span><strong>Play, laugh, connect</strong></article>
-          <article><span>Beauty</span><strong>Simple glow routines</strong></article>
-          <article><span>Wellness</span><strong>Grow gently</strong></article>
+      </section>
+
+      <section id="community" class="section intro-grid">
+        <div class="section-kicker">
+          <p class="eyebrow">Community purpose</p>
+          <h2>A warm personal bridge into the Founders Club way: Connect, Move, Grow.</h2>
+        </div>
+        <div class="intro-copy">
+          <p>
+            Founders Club is built for high-value connection without empty small talk. Glow-Grow-Studio
+            softens the first step: a cozy place to prepare people, understand their interests,
+            invite them naturally, and help them feel at home before joining the wider tribe.
+          </p>
+          <div class="principles">
+            <span>Real talk</span>
+            <span>Warm invites</span>
+            <span>Founder mindset</span>
+          </div>
         </div>
       </section>
 
-      <section id="founders-club" class="section intro-section">
-        <div class="section-heading centered-heading">
-          <p class="eyebrow">What is Founders Club?</p>
-          <h2>A weekly wellness and lifestyle circle</h2>
-          <p>Founders Club is where people move, connect, and build healthier habits together. It is designed for real life: friendly after-work activities, supportive energy, and small routines that are easier to repeat.</p>
-        </div>
-        <div class="pillar-grid">
-          {pillars.map(([title, body]) => <article class="soft-card pillar-card"><h3>{title}</h3><p>{body}</p></article>)}
-        </div>
-      </section>
-
-      <section id="activities" class="section warm-band">
+      <section id="system" class="section system-section">
         <div class="section-heading">
+          <p class="eyebrow">The community rhythm</p>
+          <h2>A simple rhythm for warm relationships, not cold recruiting.</h2>
+          <p>
+            Notice the people around you, understand their vibe, invite them into the right moment,
+            then keep your circle updated with a caring next step.
+          </p>
+        </div>
+
+        <div class="system-grid">
+          <article class="system-card">
+            <span>01</span>
+            <h3>Notice</h3>
+            <p>Keep track of friends, sports circles, coffee chats, product sharing, and referrals.</p>
+          </article>
+          <article class="system-card">
+            <span>02</span>
+            <h3>Understand</h3>
+            <p>Group people by their vibe: real talk, games, badminton, networking, wellness, or business.</p>
+          </article>
+          <article class="system-card">
+            <span>03</span>
+            <h3>Invite</h3>
+            <p>Send a simple, low-pressure invitation to the most natural Founders Club moment.</p>
+          </article>
+          <article class="system-card">
+            <span>04</span>
+            <h3>Nurture</h3>
+            <p>Share gentle updates so your downline knows who joined and who needs a warm follow-up.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="events" class="section events-section">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Community moments</p>
+          <h2>Invite people into experiences that feel easy to say yes to.</h2>
+        </div>
+
+        <div class="event-board">
+          <article class="event-card large">
+            <div>
+              <span class="tag">Coffee with Founders</span>
+              <h3>Before they join, let them feel the story.</h3>
+              <p>
+                Use coffee chats, small-room sharing, and guided discussion to help people feel
+                included before they take a bigger step.
+              </p>
+            </div>
+          </article>
+          <article class="event-card">
+            <span class="tag cyan-tag">Connect</span>
+            <h3>Casual entry points</h3>
+            <p>Simple group activities that make first contact easier, warmer, and less formal.</p>
+          </article>
+          <article class="event-card photo-card">
+            <span>Move together</span>
+          </article>
+          <article class="event-card">
+            <span class="tag rose-tag">Grow</span>
+            <h3>Warm introductions</h3>
+            <p>Connect people through shared goals, support, real conversations, and gentle momentum.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="updates" class="section updates-section">
+        <div class="update-panel">
           <div>
-            <p class="eyebrow">Weekly activities</p>
-            <h2>Choose the session that fits your energy</h2>
+            <p class="eyebrow">Circle update format</p>
+            <h2>Make every update feel personal, clear, and kind.</h2>
+            <p>
+              A good update should tell your circle who is new, what is happening next, who needs
+              a warm follow-up, and which activity feels like the best invite this week.
+            </p>
           </div>
-          <a class="button secondary" href={whatsappLink} target="_blank" rel="noopener noreferrer">Ask This Week's Slots</a>
-        </div>
-        <div class="activity-grid">
-          {activities.map((activity) => (
-            <article class="soft-card activity-card">
-              <span class="card-label">{activity.label}</span>
-              <h3>{activity.title}</h3>
-              <p><strong>Best for:</strong> {activity.bestFor}</p>
-              <p><strong>Format:</strong> {activity.format}</p>
-              <ul>{activity.details.map((detail) => <li>{detail}</li>)}</ul>
-              <a class="mini-button card-action" href={whatsappLink} target="_blank" rel="noopener noreferrer">{activity.cta}</a>
-            </article>
-          ))}
+
+          <div class="update-template" aria-label="Weekly update template">
+            <div class="template-row">
+              <strong>New people</strong>
+              <span>3 warm names from badminton and coffee chats</span>
+            </div>
+            <div class="template-row">
+              <strong>Next moment</strong>
+              <span>Coffee with Founders, Thursday Move session</span>
+            </div>
+            <div class="template-row">
+              <strong>Warm follow-up</strong>
+              <span>7 people need a personal reminder</span>
+            </div>
+            <div class="template-row">
+              <strong>Invite angle</strong>
+              <span>Connect, Move, Grow, wellness, or networking</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section why-section">
-        <div class="section-heading centered-heading">
-          <p class="eyebrow">Why join us?</p>
-          <h2>Wellness feels easier when it feels social</h2>
-        </div>
-        <div class="benefit-grid">
-          {benefits.map(([title, body]) => <article class="benefit-item"><span></span><h3>{title}</h3><p>{body}</p></article>)}
-        </div>
-      </section>
-
-      <section id="picks" class="section picks-section">
+      <section class="section member-section">
         <div class="section-heading">
+          <p class="eyebrow">Designed to expand</p>
+          <h2>Start cozy and personal, then grow into a trusted community rhythm.</h2>
+        </div>
+
+        <div class="member-grid">
+          <article>
+            <h3>Starter circle</h3>
+            <p>Your close friends, warm leads, and people already comfortable in conversation.</p>
+          </article>
+          <article>
+            <h3>Active downline</h3>
+            <p>People who need updates, event reminders, encouragement, and clear next steps.</p>
+          </article>
+          <article>
+            <h3>Open community</h3>
+            <p>A future invite page for more people to join coffee chats, sports, games, and networking.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="join" class="section join-section">
+        <div class="join-shell">
           <div>
-            <p class="eyebrow">Product and self-care picks</p>
-            <h2>Support for your glow-up journey</h2>
-            <p>Curated picks to support your glow-up journey - from beauty routines to wellness habits and post-workout recovery. Everything here is optional support, not pressure.</p>
+            <p class="eyebrow">Plan the next warm invite</p>
+            <h2>Create a cozy draft update for your next community follow-up.</h2>
+            <p>
+              This form previews the future member update tool: a simple way to turn your thoughts
+              into a kind message before inviting someone into the Founders Club vibe.
+            </p>
           </div>
-        </div>
-        <div class="pick-grid">{picks.map(([title, body]) => <article class="soft-card pick-card"><h3>{title}</h3><p>{body}</p></article>)}</div>
-      </section>
 
-      <section id="tools" class="section apps">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Interactive tools</p>
-            <h2>Simple apps for self-care decisions</h2>
-            <p>Use these quick tools to choose routines, habits, and product directions that fit your current season.</p>
-          </div>
-        </div>
-        <div class="tool-grid homepage-tools">
-          {tools.map(([name, body]) => <article class="soft-card tool-highlight"><h3>{name}</h3><p>{body}</p><a class="mini-button" href="#tool-playground">Try Tool</a></article>)}
-        </div>
+          <form class="invite-form" id="inviteForm">
+            <label>
+              Person or small circle
+              <input id="groupInput" type="text" placeholder="Example: Badminton friends" />
+            </label>
+            <label>
+              Best fit
+              <select id="interestInput">
+                <option>Coffee with Founders</option>
+                <option>Connect: games and networking</option>
+                <option>Move: sports and wellness</option>
+                <option>Grow: mindset and business</option>
+                <option>Warm product sharing</option>
+              </select>
+            </label>
+            <label>
+              Warm next step
+              <textarea id="actionInput" placeholder="Example: Invite to Coffee with Founders and send a friendly reminder on Friday"></textarea>
+            </label>
+            <button type="submit">Generate cozy update</button>
+          </form>
 
-        <div id="tool-playground" class="tool-grid enhanced-tools compact-tools">
-          <article class="tool-card"><div class="tool-title"><h3>Skin Type Finder</h3><span>Routine logic</span></div><p class="tool-note">Map skin feel, sensitivity, and current goal into a simple care priority.</p><label>Midday skin feel<select id="skinInput"><option value="balanced">Comfortable and steady</option><option value="combination">Combination and changing</option><option value="dry">Tight or flaky</option><option value="oily">Shiny through the T-zone</option><option value="sensitive">Reactive or easily red</option><option value="acne">Congested or breakout-prone</option></select></label><label>Sensitivity level<input id="skinSensitivity" type="range" min="1" max="5" value="3" /></label><label>Main goal<select id="skinGoal"><option value="barrier">Repair barrier</option><option value="glow">Boost glow</option><option value="texture">Smooth texture</option><option value="calm">Calm redness</option><option value="makeup">Prep for makeup</option><option value="post-workout">Post-workout refresh</option></select></label><button type="button" data-tool="skin">Find routine</button><div class="result rich-result" id="skinResult">Choose your skin profile to get priorities, ingredients, and steps.</div></article>
-          <article class="tool-card"><div class="tool-title"><h3>Beauty Routine Builder</h3><span>AM / PM flow</span></div><p class="tool-note">Build a realistic routine around time, moment, and effort level.</p><label>Routine moment<select id="routineInput"><option value="morning">Morning</option><option value="night">Night</option><option value="event">Before an event</option><option value="postWorkout">After workout</option><option value="travel">Travel day</option></select></label><label>Time available<select id="routineTime"><option value="5">5 minutes</option><option value="10">10 minutes</option><option value="20">20 minutes</option><option value="30">30 minutes</option></select></label><label>Finish style<select id="routineFinish"><option value="natural">Natural glow</option><option value="polished">Soft polished</option><option value="minimal">Minimal reset</option><option value="fresh">Fresh and sporty</option><option value="calm">Calm and hydrated</option></select></label><button type="button" data-tool="routine">Build steps</button><div class="result rich-result" id="routineResult">Your custom order, focus, and skip rules will appear here.</div></article>
-          <article class="tool-card"><div class="tool-title"><h3>Wellness Habit Tracker</h3><span>Daily check-in</span></div><p class="tool-note">Track care wins and get a kind next step instead of an all-or-nothing score.</p><div class="checks"><label><input type="checkbox" value="Water" /> Water</label><label><input type="checkbox" value="Sleep" /> Sleep</label><label><input type="checkbox" value="Movement" /> Movement</label><label><input type="checkbox" value="Mood" /> Mood</label><label><input type="checkbox" value="Protein" /> Protein</label><label><input type="checkbox" value="Community" /> Community</label></div><label>Energy today<input id="energyInput" type="range" min="1" max="5" value="3" /></label><label>Sleep hours<input id="sleepInput" type="number" min="0" max="12" value="7" /></label><button type="button" data-tool="habits">Check in</button><div class="result rich-result" id="habitResult">Log wins to get your care score, pattern, and next tiny action.</div></article>
-          <article class="tool-card"><div class="tool-title"><h3>Product Match Quiz</h3><span>Curated picks</span></div><p class="tool-note">Match beauty or wellness products by concern, texture preference, and lifestyle moment.</p><label>Biggest concern<select id="productInput"><option value="glow">Dullness</option><option value="calm">Redness</option><option value="energy">Low energy</option><option value="sleep">Poor sleep</option><option value="recovery">Post-workout recovery</option><option value="confidence">Confidence boost</option></select></label><label>Preference<select id="productPreference"><option value="gentle">Gentle and sensitive-safe</option><option value="fast">Fast visible payoff</option><option value="low">Low-maintenance</option><option value="ritual">Ritual feeling</option><option value="sporty">Sporty and practical</option></select></label><label>Budget lane<select id="productBudget"><option value="starter">Starter</option><option value="mid">Mid-range</option><option value="treat">Treat-yourself</option><option value="club">Club event ready</option></select></label><button type="button" data-tool="product">Match me</button><div class="result rich-result" id="productResult">Your product lane, ingredient cues, and review checklist will appear here.</div></article>
-        </div>
-      </section>
-
-      <section id="about" class="section story-section">
-        <div class="story-copy">
-          <p class="eyebrow">Founder story</p>
-          <h2>A personal journey turned into a shared space</h2>
-          <p>Glow & Grow Studio began from a personal journey of self-care, confidence, beauty, wellness, and creative growth. Founders Club turns that journey into a shared space where people can move, connect, and grow together.</p>
-          <a class="button secondary" href="#founders-club">Learn About The Club</a>
-        </div>
-        <div class="founder-card soft-card">
-          <span>Founder note</span>
-          <strong>From personal routines to community rhythm.</strong>
-          <p>The heart of this space is simple: start gently, show up honestly, and let connection make growth feel less lonely.</p>
-        </div>
-      </section>
-
-      <section class="section highlights-section">
-        <div class="section-heading centered-heading">
-          <p class="eyebrow">Event highlights</p>
-          <h2>Real-world moments, soft proof</h2>
-        </div>
-        <div class="highlight-grid">
-          <figure class="event-photo">
-            <img src="/founder-hiit-event.svg" alt="Founders Club HIIT group smiling after an evening wellness session" loading="lazy" />
-            <figcaption>Founders Club HIIT community session</figcaption>
-          </figure>
-          {quotes.map(([quote, label]) => <article class="soft-card quote-card"><blockquote>{quote}</blockquote><span>{label}</span></article>)}
-        </div>
-      </section>
-
-      <section class="section faq-section">
-        <div class="section-heading centered-heading">
-          <p class="eyebrow">FAQ</p>
-          <h2>Helpful things to know before joining</h2>
-        </div>
-        <div class="faq-list">
-          {faqs.map(([question, answer]) => <details><summary>{question}</summary><p>{answer}</p></details>)}
-        </div>
-      </section>
-
-      <section class="section final-cta">
-        <div>
-          <p class="eyebrow">Ready for the next step?</p>
-          <h2>Ready to move, connect, and grow with us?</h2>
-          <p>Join the next Founders Club session and start with one simple step.</p>
-          <div class="hero-actions centered-actions">
-            <a class="button primary" href={whatsappLink} target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
-            <a class="button secondary" href="#activities">View Weekly Activities</a>
-          </div>
+          <aside class="draft-preview" aria-live="polite">
+            <span>Draft preview</span>
+            <h3 id="previewTitle">Badminton friends</h3>
+            <p id="previewBody">
+              Invite this circle to Move: sports and wellness. Suggested next step: confirm the
+              next cozy community moment and send a warm reminder.
+            </p>
+          </aside>
         </div>
       </section>
     </main>
 
-    <footer><strong>Glow & Grow Studio</strong><span>Founders Club for community-led wellness, beauty, and self-care.</span></footer>
+    <footer>
+      <strong>Glow-Grow-Studio</strong>
+      <span>A warm personal community lounge connected with Founders Club.</span>
+      <a href="https://www.foundersclub.asia/" target="_blank" rel="noopener noreferrer">Founders Club Asia</a>
+    </footer>
+
     <script is:inline src="/app.js"></script>
   </body>
 </html>
