@@ -246,28 +246,40 @@ h3 {
 
 .hero-metrics {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  width: min(100%, 680px);
   max-width: 620px;
 }
 
 .hero-metrics div {
-  padding: 14px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  min-height: 104px;
+  padding: 16px 18px;
   border: 1px solid rgba(230, 234, 243, 0.86);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.7);
 }
 
 .hero-metrics dt {
-  margin-bottom: 4px;
+  margin-bottom: 0;
   color: var(--ink);
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 900;
+  line-height: 1;
 }
 
 .hero-metrics dd {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 1.35;
+  overflow-wrap: normal;
+  text-wrap: balance;
+  word-break: normal;
+  hyphens: none;
 }
 
 .hero-visual {
