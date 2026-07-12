@@ -94,20 +94,22 @@ import "../styles/global.css";
           </dl>
         </div>
 
-        <div class="hero-visual" aria-label="Animated Glow-Grow-Studio hero visual">
-          <div class="hero-orbit" aria-hidden="true">
+        <div class="hero-visual" aria-label="Interactive Founders Club hero visual">
+          <div class="hero-orbit" data-hero-orbit>
             <span class="hero-glow glow-one"></span>
             <span class="hero-glow glow-two"></span>
+            <span class="hero-trace trace-one"></span>
+            <span class="hero-trace trace-two"></span>
             <span class="hero-card card-one"></span>
             <span class="hero-card card-two"></span>
             <span class="hero-card card-three"></span>
             <span class="hero-ring ring-one"></span>
             <span class="hero-ring ring-two"></span>
             <span class="hero-ring ring-three"></span>
-            <span class="hero-core">GG</span>
-            <span class="hero-pill pill-connect">Connect</span>
-            <span class="hero-pill pill-move">Move</span>
-            <span class="hero-pill pill-grow">Grow</span>
+            <button class="hero-core" type="button" data-orbit-action="reset" aria-label="Reset Founders Club orbit focus">FC</button>
+            <button class="hero-pill pill-connect is-active" type="button" data-orbit-action="connect">Connect</button>
+            <button class="hero-pill pill-move" type="button" data-orbit-action="move">Move</button>
+            <button class="hero-pill pill-grow" type="button" data-orbit-action="grow">Grow</button>
             <span class="hero-particle particle-one"></span>
             <span class="hero-particle particle-two"></span>
             <span class="hero-particle particle-three"></span>
