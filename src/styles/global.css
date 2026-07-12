@@ -1180,8 +1180,8 @@ h3 {
 
 .event-card.large {
   align-content: end;
-  grid-row: span 2;
-  min-height: 438px;
+  grid-row: span 3;
+  min-height: 666px;
   background:
     linear-gradient(135deg, rgba(16, 23, 47, 0.72), rgba(242, 138, 46, 0.38)),
     url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80") center/cover;
@@ -1239,6 +1239,16 @@ h3 {
   background: #ffd4ad;
   outline: 3px solid rgba(255, 255, 255, 0.38);
   outline-offset: 3px;
+}
+
+.event-card.sports-card {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(236, 252, 255, 0.88)),
+    white;
+}
+
+.event-card.sports-card p {
+  max-width: 420px;
 }
 
 .event-card:not(.large):not(.photo-card):last-child {
