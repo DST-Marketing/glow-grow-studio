@@ -1185,6 +1185,25 @@ h3 {
   color: rgba(255, 255, 255, 0.74);
 }
 
+.preview-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 46px;
+  margin-top: 16px;
+  border: 1px solid rgba(255, 212, 173, 0.32);
+  border-radius: 8px;
+  color: #10172f;
+  background: #ffd4ad;
+  font-weight: 900;
+  text-align: center;
+}
+
+.preview-action:hover {
+  background: #ffe2c6;
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;

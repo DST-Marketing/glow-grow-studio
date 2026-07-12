@@ -265,43 +265,50 @@ import "../styles/global.css";
       <section id="join" class="section join-section">
         <div class="join-shell">
           <div>
-            <p class="eyebrow">Plan the next warm invite</p>
-            <h2>Create a cozy draft update for your next community follow-up.</h2>
+            <p class="eyebrow">Request club information</p>
+            <h2>Curious about Founders Club? Ask for the details here.</h2>
             <p>
-              This form previews the future member update tool: a simple way to turn your thoughts
-              into a kind message before inviting someone into the Founders Club vibe.
+              Leave a quick note about what you want to understand, whether it is Coffee with
+              Founders, sports sessions, networking, wellness activities, or how to join the
+              community. We will help you find the warmest next step.
             </p>
           </div>
 
           <form class="invite-form" id="inviteForm">
             <label>
-              Person or small circle
-              <input id="groupInput" type="text" placeholder="Example: Badminton friends" />
+              Your name
+              <input id="nameInput" type="text" placeholder="Example: Hui Chen" autocomplete="name" />
             </label>
             <label>
-              Best fit
+              WhatsApp or email
+              <input id="contactInput" type="text" placeholder="Example: +60... or hello@email.com" autocomplete="email" />
+            </label>
+            <label>
+              I want to know about
               <select id="interestInput">
                 <option>Coffee with Founders</option>
                 <option>Connect: games and networking</option>
-                <option>Move: sports and wellness</option>
-                <option>Grow: mindset and business</option>
-                <option>Warm product sharing</option>
+                <option>Move: sports and wellness sessions</option>
+                <option>Grow: mindset and business circle</option>
+                <option>Membership and joining process</option>
+                <option>Upcoming Founders Club events</option>
               </select>
             </label>
             <label>
-              Warm next step
-              <textarea id="actionInput" placeholder="Example: Invite to Coffee with Founders and send a friendly reminder on Friday"></textarea>
+              What would you like to ask?
+              <textarea id="messageInput" placeholder="Example: I would like to know the next session date, location, and how to join."></textarea>
             </label>
-            <button type="submit">Generate cozy update</button>
+            <button type="submit">Preview my request</button>
           </form>
 
           <aside class="draft-preview" aria-live="polite">
-            <span>Draft preview</span>
-            <h3 id="previewTitle">Badminton friends</h3>
+            <span>Lead preview</span>
+            <h3 id="previewTitle">Founders Club inquiry</h3>
             <p id="previewBody">
-              Invite this circle to Move: sports and wellness. Suggested next step: confirm the
-              next cozy community moment and send a warm reminder.
+              Hi Founders Club, I would like to request more information about Coffee with
+              Founders and the warmest way to join the community.
             </p>
+            <a id="leadWhatsappLink" class="preview-action" href="https://wa.me/60104675275?text=Hi%20Founders%20Club%2C%20I%20would%20like%20to%20request%20more%20information%20about%20Coffee%20with%20Founders%20and%20the%20warmest%20way%20to%20join%20the%20community." target="_blank" rel="noopener noreferrer">Send request on WhatsApp</a>
           </aside>
         </div>
       </section>
