@@ -4,6 +4,14 @@ const body = document.querySelector("#previewBody");
 const whatsappLink = document.querySelector("#leadWhatsappLink");
 const heroOrbit = document.querySelector("[data-hero-orbit]");
 const orbitButtons = heroOrbit ? Array.from(heroOrbit.querySelectorAll("[data-orbit-action]")) : [];
+const carouselModal = document.querySelector("#eventCarouselModal");
+const carouselOpenButton = document.querySelector("[data-carousel-open]");
+const carouselCloseButtons = carouselModal ? Array.from(carouselModal.querySelectorAll("[data-carousel-close]")) : [];
+const carouselSlides = carouselModal ? Array.from(carouselModal.querySelectorAll(".carousel-slide")) : [];
+const carouselDots = carouselModal ? Array.from(carouselModal.querySelectorAll("[data-carousel-dot]")) : [];
+const carouselPrev = carouselModal ? carouselModal.querySelector("[data-carousel-prev]") : null;
+const carouselNext = carouselModal ? carouselModal.querySelector("[data-carousel-next]") : null;
+let carouselIndex = 0;
 
 if (form && title && body && whatsappLink) {
   form.addEventListener("submit", (event) => {
@@ -54,5 +62,63 @@ if (heroOrbit && orbitButtons.length) {
   heroOrbit.addEventListener("pointerleave", () => {
     heroOrbit.style.setProperty("--tilt-x", "0deg");
     heroOrbit.style.setProperty("--tilt-y", "0deg");
+  });
+}
+
+if (carouselModal && carouselOpenButton && carouselSlides.length) {
+  const showSlide = (index) => {
+    carouselIndex = (index + carouselSlides.length) % carouselSlides.length;
+
+    carouselSlides.forEach((slide, slideIndex) => {
+      slide.classList.toggle("is-active", slideIndex === carouselIndex);
+    });
+
+    carouselDots.forEach((dot, dotIndex) => {
+      dot.classList.toggle("is-active", dotIndex === carouselIndex);
+    });
+  };
+
+  const openCarousel = () => {
+    carouselModal.classList.add("is-open");
+    carouselModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+    showSlide(carouselIndex);
+    carouselNext?.focus();
+  };
+
+  const closeCarousel = () => {
+    carouselModal.classList.remove("is-open");
+    carouselModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+    carouselOpenButton.focus();
+  };
+
+  carouselOpenButton.addEventListener("click", openCarousel);
+
+  carouselCloseButtons.forEach((button) => {
+    button.addEventListener("click", closeCarousel);
+  });
+
+  carouselPrev?.addEventListener("click", () => showSlide(carouselIndex - 1));
+  carouselNext?.addEventListener("click", () => showSlide(carouselIndex + 1));
+
+  carouselDots.forEach((dot) => {
+    dot.addEventListener("click", () => showSlide(Number(dot.dataset.carouselDot)));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (!carouselModal.classList.contains("is-open")) return;
+
+    if (event.key === "Escape") {
+      closeCarousel();
+    }
+
+    if (event.key === "ArrowLeft") {
+      showSlide(carouselIndex - 1);
+    }
+
+    if (event.key === "ArrowRight") {
+      showSlide(carouselIndex + 1);
+    }
   });
 }

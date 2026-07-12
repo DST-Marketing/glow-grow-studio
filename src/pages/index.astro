@@ -223,6 +223,9 @@ import "../styles/global.css";
           </article>
           <article class="event-card photo-card">
             <span>Move together</span>
+            <button class="event-cta" type="button" data-carousel-open>
+              View event moments
+            </button>
           </article>
           <article class="event-card">
             <span class="tag rose-tag">Grow</span>
@@ -363,6 +366,67 @@ import "../styles/global.css";
         </div>
       </section>
     </main>
+
+    <div class="event-modal" id="eventCarouselModal" aria-hidden="true">
+      <div class="event-modal-backdrop" data-carousel-close></div>
+      <section class="event-modal-panel" role="dialog" aria-modal="true" aria-labelledby="eventCarouselTitle">
+        <div class="event-modal-top">
+          <div>
+            <p class="eyebrow">Move together</p>
+            <h2 id="eventCarouselTitle">Event moments you can join through Glow & Grow Studio.</h2>
+          </div>
+          <button class="modal-close" type="button" data-carousel-close aria-label="Close event carousel">Close</button>
+        </div>
+
+        <div class="event-carousel" data-carousel>
+          <article class="carousel-slide is-active">
+            <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1100&q=82" alt="Badminton player jumping for a shot during a sports session" />
+            <div>
+              <span class="tag cyan-tag">Sports session</span>
+              <h3>Badminton and movement nights</h3>
+              <p>
+                Easy group sessions for people who prefer to connect while moving, playing,
+                and sharing a light post-game conversation.
+              </p>
+            </div>
+          </article>
+
+          <article class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1100&q=82" alt="Group fitness class training together in a studio" />
+            <div>
+              <span class="tag rose-tag">Wellness</span>
+              <h3>HIIT and self-care introductions</h3>
+              <p>
+                A warmer way to invite friends who want more energy, discipline, wellness,
+                and a supportive circle before joining bigger sessions.
+              </p>
+            </div>
+          </article>
+
+          <article class="carousel-slide">
+            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1100&q=82" alt="People gathered around a table for a friendly community discussion" />
+            <div>
+              <span class="tag">Coffee with Founders</span>
+              <h3>After-session conversations</h3>
+              <p>
+                Gentle follow-up moments where new friends can ask questions, understand the
+                Founders Club community, and feel included before the next step.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="carousel-controls">
+          <button type="button" data-carousel-prev aria-label="Show previous event">Previous</button>
+          <div class="carousel-dots" aria-label="Event carousel pagination">
+            <button class="is-active" type="button" data-carousel-dot="0" aria-label="Show badminton session"></button>
+            <button type="button" data-carousel-dot="1" aria-label="Show wellness session"></button>
+            <button type="button" data-carousel-dot="2" aria-label="Show coffee discussion"></button>
+          </div>
+          <button type="button" data-carousel-next aria-label="Show next event">Next</button>
+        </div>
+      </section>
+    </div>
 
     <footer>
       <strong>Glow-Grow-Studio</strong>
