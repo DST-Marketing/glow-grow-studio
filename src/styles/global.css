@@ -371,8 +371,10 @@ h3 {
 
 .hero-glow,
 .hero-trace,
+.hero-photo,
 .hero-card,
 .hero-ring,
+.hero-note,
 .hero-core,
 .hero-pill,
 .hero-particle {
@@ -418,9 +420,84 @@ h3 {
   animation-direction: reverse;
 }
 
+.hero-photo {
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  border-radius: 8px;
+  box-shadow: 0 26px 70px rgba(16, 23, 47, 0.2);
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.hero-photo-main {
+  top: 8%;
+  left: 4%;
+  width: 48%;
+  height: 55%;
+  animation: boardFloat 7.4s ease-in-out infinite;
+}
+
+.hero-photo-secondary {
+  right: 4%;
+  bottom: 7%;
+  width: 48%;
+  height: 34%;
+  animation: boardFloat 8.2s ease-in-out infinite reverse;
+}
+
+.hero-note {
+  z-index: 3;
+  display: grid;
+  gap: 6px;
+  max-width: 210px;
+  padding: 14px 16px;
+  border: 1px solid rgba(230, 217, 181, 0.96);
+  border-radius: 8px;
+  color: var(--ink);
+  background: rgba(255, 239, 181, 0.9);
+  box-shadow: 0 18px 42px rgba(16, 23, 47, 0.12);
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.25;
+  pointer-events: none;
+  animation: noteLift 5.6s ease-in-out infinite;
+}
+
+.hero-note small {
+  color: #ee7667;
+  font-size: 11px;
+  font-weight: 950;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.note-session {
+  top: 21%;
+  right: 5%;
+}
+
+.note-welcome {
+  left: 6%;
+  bottom: 20%;
+  max-width: 180px;
+  background: rgba(230, 250, 231, 0.92);
+  border-color: rgba(190, 230, 198, 0.92);
+  animation-delay: 0.8s;
+}
+
+.note-meetup {
+  right: 20%;
+  bottom: 18%;
+  max-width: 190px;
+  background: rgba(255, 220, 196, 0.92);
+  border-color: rgba(242, 188, 153, 0.88);
+  animation-delay: 1.4s;
+}
+
 .hero-card {
   top: 50%;
   left: 50%;
+  z-index: 0;
   width: 58%;
   height: 34%;
   border: 1px solid rgba(242, 138, 46, 0.32);
@@ -449,6 +526,7 @@ h3 {
 }
 
 .hero-ring {
+  z-index: 0;
   border: 1px solid rgba(88, 66, 232, 0.18);
   border-radius: 50%;
   animation: orbitSpin 11s linear infinite;
@@ -476,6 +554,7 @@ h3 {
 .hero-core {
   top: 50%;
   left: 50%;
+  z-index: 4;
   display: grid;
   place-items: center;
   width: 112px;
@@ -504,7 +583,7 @@ h3 {
 }
 
 .hero-pill {
-  z-index: 2;
+  z-index: 5;
   min-width: 112px;
   padding: 12px 16px;
   border: 1px solid rgba(230, 234, 243, 0.92);
@@ -1184,7 +1263,7 @@ h3 {
   min-height: 666px;
   background:
     linear-gradient(135deg, rgba(16, 23, 47, 0.72), rgba(242, 138, 46, 0.38)),
-    url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80") center/cover;
+    url("/events/coffee-with-founders.png") center/cover;
   color: white;
 }
 
@@ -1199,7 +1278,7 @@ h3 {
   color: white;
   background:
     linear-gradient(rgba(16, 23, 47, 0.04), rgba(16, 23, 47, 0.42)),
-    url("https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=700&q=80") center/cover;
+    url("/events/badminton-group.png") center/cover;
   font-weight: 900;
 }
 
@@ -1242,13 +1321,16 @@ h3 {
 }
 
 .event-card.sports-card {
+  align-content: end;
+  color: white;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(236, 252, 255, 0.88)),
-    white;
+    linear-gradient(135deg, rgba(16, 23, 47, 0.28), rgba(16, 23, 47, 0.72)),
+    url("/events/ad-hoc-sports-networking.png") center/cover;
 }
 
 .event-card.sports-card p {
   max-width: 420px;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .event-card:not(.large):not(.photo-card):last-child {
@@ -1699,6 +1781,30 @@ footer a {
   }
 }
 
+@keyframes boardFloat {
+  0%,
+  100% {
+    opacity: 0.94;
+    transform: translate3d(0, 0, 0) rotate(-1deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate3d(10px, -14px, 24px) rotate(1.5deg);
+  }
+}
+
+@keyframes noteLift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 36px);
+  }
+
+  50% {
+    transform: translate3d(0, -12px, 54px);
+  }
+}
+
 @keyframes slideReveal {
   from {
     opacity: 0;
@@ -1806,8 +1912,10 @@ footer a {
   .hero-orbit::after,
   .hero-glow,
   .hero-trace,
+  .hero-photo,
   .hero-card,
   .hero-ring,
+  .hero-note,
   .hero-core,
   .hero-pill,
   .hero-pill.is-active::after,
@@ -1914,6 +2022,45 @@ footer a {
     min-width: 88px;
     padding: 9px 10px;
     font-size: 12px;
+  }
+
+  .hero-photo-main {
+    top: 7%;
+    left: 4%;
+    width: 54%;
+    height: 48%;
+  }
+
+  .hero-photo-secondary {
+    right: 3%;
+    bottom: 8%;
+    width: 52%;
+    height: 30%;
+  }
+
+  .hero-note {
+    max-width: 142px;
+    padding: 10px 11px;
+    font-size: 12px;
+  }
+
+  .hero-note small {
+    font-size: 9px;
+  }
+
+  .note-session {
+    top: 19%;
+    right: 0;
+  }
+
+  .note-welcome {
+    left: 2%;
+    bottom: 25%;
+  }
+
+  .note-meetup {
+    right: 10%;
+    bottom: 15%;
   }
 
   .pill-grow {
